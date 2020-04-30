@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src=app.js></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <ion-app>
+
+        <ion-content fullscreen>
+            <ion-item>
+                <label id="pt"></label>
+                <ion-label position="floating">Search</ion-label>
+                <ion-textarea id="txtsearch" placeholder="Enter more information here..."></ion-textarea>
+                <ion-button id="Sear" onclick="return buscarPopup();" size="large" color="danger">Search</ion-button>
+            </ion-item>
+
+            <ion-card>
+                <img />
+                <ion-card-header>
+                    <ion-card-subtitle id="cont1"></ion-card-subtitle>
+                    <ion-card-title id="anio"></ion-card-title>
+                </ion-card-header>
+                <ion-card-content id="descripcion">
+
+                </ion-card-content>
+            </ion-card>
+            <section>
+
+
+
+                <ion-button id="Prev" onclick="return cerrarPopup();" size="large" color="dark">Preview</ion-button>
+                <ion-button id="Next" onclick="return abrirPopup();" size="large" color="dark">Next</ion-button>
+                <ion-button id="Add" onclick="return savePopup();" expand="full" color="success">Add Firebase</ion-button>
+
+            </section>
+        </ion-content>
+    </ion-app>
+</body>
+
+
+
+
+</html>
